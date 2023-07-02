@@ -5,12 +5,14 @@ import com.marcetasolution.orderservice.dto.OrderRequest;
 import com.marcetasolution.orderservice.model.Order;
 import com.marcetasolution.orderservice.model.OrderLineItem;
 import com.marcetasolution.orderservice.repository.OrderRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
 @Service
+@Transactional
 public class OrderService {
 
     private final OrderRepository orderRepository;
